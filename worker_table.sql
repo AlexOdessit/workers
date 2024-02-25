@@ -1,7 +1,7 @@
 CREATE TABLE workers(
  id SERIAL PRIMARY KEY,
  full_name VARCHAR(80) NOT NULL CHECK (full_name != ''),
- birthday  DATE NOT NULL CHECK (birthday > '1996-01-01' AND birthday <= current_date ),
+ birthday  DATE NOT NULL CHECK (birthday > '1986-01-01' AND birthday <= current_date ),
  salary NUMERIC(10,2) NOT NULL DEFAULT 0.00,
  created_at TIMESTAMP DEFAULT current_timestamp,
  updated_at TIMESTAMP DEFAULT current_timestamp
@@ -27,4 +27,12 @@ ALTER COLUMN salary SET DEFAULT 500;
 --setting new TABLE NAME 
 ALTER TABLE workers
 RENAME TO employees;
+
+ALTER TABLE eemployees
+ALTER COLUMN birthday
+SET DEFAULT '1986-01-01';
+
+ALTER TABLE eemployees
+ADD CONSTRAINT "check birthday"
+CHECK (birthday >= '1986-01-01' AND birthday <= current_date);
 
