@@ -19,3 +19,7 @@ ADD COLUMN email VARCHAR(80) UNIQUE;
 ALTER TABLE workers
 ALTER COLUMN email SET NOT NULL,
 ADD CONSTRAINT  "email can't be empty" CHECK (email != '');
+
+--adding default salary
+ALTER TABLE workers 
+ALTER COLUMN salary SET DEFAULT 500;
