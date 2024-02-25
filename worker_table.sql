@@ -29,8 +29,13 @@ ALTER TABLE workers
 RENAME TO employees;
 
 ALTER TABLE employees
-ALTER COLUMN birthday
-SET DEFAULT '1986-01-01';
+DROP CONSTRAINT "workers_birthday_check";
 
 ALTER TABLE employees
-ADD  CONSTRAINT "incorrect birthday range" CHECK (birthday > '1986-01-01' AND birthday <= current_date);
+ADD CONSTRAINT "incorrect birthday range" CHECK (
+    birthday >= '1990-01-01'
+    AND birthday <= current_date
+  );
+
+
+  
