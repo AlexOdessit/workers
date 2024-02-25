@@ -15,3 +15,7 @@ ADD COLUMN vacation_days INT DEFAULT 0 CHECK (vacation_days >= 0);
 ALTER TABLE workers
 ADD COLUMN email VARCHAR(80) UNIQUE;
 
+--changing email constraint
+ALTER TABLE workers
+ALTER COLUMN email SET NOT NULL,
+ADD CONSTRAINT  "email can't be empty" CHECK (email != '');
