@@ -23,3 +23,8 @@ ADD CONSTRAINT  "email can't be empty" CHECK (email != '');
 --adding default salary
 ALTER TABLE workers 
 ALTER COLUMN salary SET DEFAULT 500;
+
+--setting new TABLE NAME 
+ALTER TABLE workers
+RENAME TO employees;
+
