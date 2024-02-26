@@ -36,5 +36,4 @@ ADD CONSTRAINT "incorrect birthday range" CHECK(birthday <= current_date);
 
 
 
-
   

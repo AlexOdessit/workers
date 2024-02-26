@@ -16,4 +16,10 @@ VALUES
 ('Ярослав', '1980-03-30', 'yar@gmail.com', 1500.00),
 ('Павло', '1993-07-14', 'pavel@gmail.com', 1000.00);
 
+--adding a few more employees
+INSERT INTO employees (full_name, birthday, email, salary)
+VALUES 
+('Michael', '1975-06-25', 'michael@gmail.com', 500.00),
+('Karina', '1985-09-12', 'karina@gmail.com', 700.00);
+
 
