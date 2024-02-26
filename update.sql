@@ -18,3 +18,15 @@ WHERE id IN(5,6);
 UPDATE employees
 SET vacation_days = 5
 WHERE id > 2 AND id < 5;
+
+--change Yaroslav to Evgen
+UPDATE  employees 
+SET full_name = 'Евген' 
+WHERE full_name = 'Павло';
+
+--+ 200
+UPDATE  employees 
+SET salary  = salary + 200 
+WHERE full_name = 'Eвген';
+
+
