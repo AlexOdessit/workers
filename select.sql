@@ -20,3 +20,7 @@ WHERE full_name = 'Петро';
 
 SELECT * FROM employees 
 WHERE full_name != 'Петро';
+
+--select 34 or salary 700
+SELECT * FROM employees
+WHERE EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM birthday) >= 34 OR salary = 700;

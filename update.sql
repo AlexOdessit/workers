@@ -33,4 +33,18 @@ UPDATE  employees
 SET salary  = salary + 200 
 WHERE full_name = 'Евген';
 
+--update values in one query
+UPDATE employees
+SET vacation_days = 
+  CASE 
+    WHEN id = 1 THEN 30
+    WHEN id = 2 THEN 40
+    WHEN id = 3 THEN 20
+    WHEN id = 4 THEN 25
+    ELSE vacation_days 
+  END
+WHERE id IN (1, 2, 3, 4);
 
+UPDATE employees
+SET vacation_days = 5
+WHERE id IN (5,6);
