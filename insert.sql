@@ -23,3 +23,10 @@ VALUES
 ('Karina', '1985-09-12', 'karina@gmail.com', 700.00);
 
 
+INSERT INTO employees
+(full_name, birthday, email, salary)
+VALUES 
+('Alex', '1986-03-29', 'alex@gmail.com', 300.00);
+
+
+
