@@ -1,3 +1,7 @@
+UPDATE employees
+SET full_name = 'Петро'
+WHERE id = 5;
+
 --icrease Pavlo's salary
 UPDATE employees 
 SET salary  = salary + 1000

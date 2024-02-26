@@ -13,3 +13,10 @@ WHERE salary != 500;
 --select Evgen salary and vacations
 SELECT salary,vacation_days FROM employees 
 WHERE full_name = 'Евген';
+
+--select Petro and no Petro
+SELECT * FROM employees 
+WHERE full_name = 'Петро';
+
+SELECT * FROM employees 
+WHERE full_name != 'Петро';
