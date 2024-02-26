@@ -27,6 +27,6 @@ WHERE full_name = 'Павло';
 --+ 200
 UPDATE  employees 
 SET salary  = salary + 200 
-WHERE full_name = 'Eвген';
+WHERE full_name = 'Евген';
 
 
