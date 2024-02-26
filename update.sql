@@ -12,3 +12,9 @@ WHERE id = 4;
 UPDATE employees 
 SET salary = 700
 WHERE id IN(5,6);
+
+
+--set vacation 5days
+UPDATE employees
+SET vacation_days = 5
+WHERE id > 2 AND id < 5;
