@@ -48,3 +48,5 @@ WHERE id IN (1, 2, 3, 4);
 UPDATE employees
 SET vacation_days = 5
 WHERE id IN (5,6);
+
+
