@@ -22,13 +22,11 @@ SELECT * FROM employees
 WHERE full_name != 'Петро';
 
 --select 34 or salary 700
-SELECT * FROM employees
-WHERE EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM birthday) >= 34 OR salary = 700;
+SELECT *,age(birthday) FROM employees 
+WHERE extract(years from age(birthday)) >= 34 OR salary = 700;
 
 --select 29 to 44 or salary 600-1200
 SELECT *
 FROM employees
-WHERE (EXTRACT(years FROM AGE(CURRENT_DATE)) - EXTRACT(years FROM AGE(birthday)) BETWEEN 29 AND 44) OR (salary BETWEEN 600 AND 1200);
-
-
-
+WHERE EXTRACT(YEAR FROM AGE(birthday)) BETWEEN 29 AND 44
+   OR salary BETWEEN 600 AND 1200;

@@ -1,11 +1,7 @@
 UPDATE employees
-SET full_name = 'Петро'
+SET full_name = 'Петро',salary = 2000
 WHERE id = 5;
 
---icrease Pavlo's salary
-UPDATE employees 
-SET salary  = salary + 1000
-WHERE full_name = 'Павло';
 
 --changing date value id=
 UPDATE employees 
@@ -15,13 +11,13 @@ WHERE id = 4;
 --increasing values where salary < 400
 UPDATE employees 
 SET salary = 700
-WHERE id IN(5,6);
+WHERE salary <= 400;
 
 
 --set vacation 5days
 UPDATE employees
 SET vacation_days = 5
-WHERE id > 2 AND id < 5;
+WHERE id > 2 AND id <= 5;
 
 --change Yaroslav to Evgen
 UPDATE  employees 
